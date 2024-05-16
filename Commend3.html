@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Command</title>
+</head>
+<body>
+    <form action="../Commends.php" id="form" method="post">
+    <table class="table-cmd" border="1" width="90%">
+        <tr>
+            <td align="center" class="table-td-cmd-img" rowspan="6"><img src="../images/img3.png" width="450px" height="520px" alt="#"></td>
+            <td class="table-td-cmd">Vendor :</td>
+            <td class="info" align="center">Ragueb Yacine</td>
+        </tr>
+        <tr>
+            <td class="table-td-cmd">Price :</td>
+            <td class="info" align="center"><input type="text" name="price" value="1500DA"></td>
+          </tr>
+          <tr>
+            <td class="table-td-cmd">Ref :</td>
+            <td class="info" align="center"><input type="text" name="ref" value="A789A"></td>
+          </tr>
+        <tr>
+            <td class="table-td-cmd">Color :</td>
+            <td class="info" align="center">
+                <div class="info-check">
+                    <div class="check">
+                        <input type="checkbox" name="color[]" value="silver">Silver
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="color[]" value="black">Black
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="color[]" value="brown" checked>Brown
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-td-cmd">Quantity :</td>
+            <td class="table-td-cmd" align="center">
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="hide"></td>
+            <td class="hide">
+                <input type="submit" value="Buy Now">
+            </td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        var color = document.getElementsByName("color[]"),
+      quantity = document.getElementById('quantity');
+  
+  var form = document.getElementById("form");
+  
+  const ValidationCommonde = () => {
+      var ValueQuan = quantity.value;
+      var ValueColor = "";
+      for(let i = 0; i< color.length; i++){
+          if(color[i].checked){
+              ValueColor = ValueColor + " " + color[i].value;
+          }
+      }
+      if(ValueColor == ""){
+          alert("choose color !");
+          return false;
+      } else if(confirm("your color(s) is : " + ValueColor +"\n confirm your choise ! " )== false){
+          return false;
+      } else if(confirm("Quantity is : " + ValueQuan +"\n confirm your choise ! " )== false){
+          return false;
+      } else {
+          return true;
+      }
+  };
+  
+  form.onsubmit = function(){
+      return ValidationCommonde();
+  };
+      </script>
+</body>
+</html>

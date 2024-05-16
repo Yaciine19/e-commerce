@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <form action="sign.php" id="form" method="post">
+    <table border="1" align="center" width="50%" class="table-login">
+        <tr>
+            <th colspan="2" align="center">Sigin up</th>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Lastname :</td>
+            <td class="table-td-login">
+                <input type="text" name="lastname" id="Nom">
+                <p id="pNom"></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Firstname :</td>
+            <td class="table-td-login"><input type="text" name="firstname" id="prenom"><p id="pprenom"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Age :</td>
+            <td class="table-td-login"><input type="text" name="age" id="age"><p id="pAge"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Wilaya :</td>
+            <td class="table-td-login">
+                <select name="wilaya" id="wilaya">
+                    <option value="setif">Setif</option>
+                    <option value="Oran">Oran</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Jijle">Jijle</option>
+                    <option value="Bejaia">Bejaia</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Telephone :</td>
+            <td class="table-td-login"><input type="tel" name="telephone" id="Tel"><p id="pTel"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">email :</td>
+            <td class="table-td-login"><input type="email" name="email" id="email"><p id="pemail"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Adresse :</td>
+            <td class="table-td-login"><input type="text" name="adr" id="adr"><p id="pAdr"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Password :</td>
+            <td class="table-td-login"><input type="password" name="password" id="psw"><p id="ppsw"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">confirmer password :</td>
+            <td class="table-td-login"><input type="password" id="Cpsw"><p id="pCpsw"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login sign">Sex :</td>
+            <td class="table-td-login radio-container">
+                <div class="radio-cat"><input type="radio" name="sex" id="Male" value="man" checked>
+                <label for="Male">Man</label></div>
+                <div class="radio-cat"><input type="radio" name="sex" id="Femme" value="woman">
+                <label for="Femme">Women</label></div>
+                <p id="pSex"></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="table-td-login">
+                <input type="submit" value="Submit">
+            </td>
+            <td class="table-td-login"><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+<script src="sign.js"></script>
+</body>
+</html>

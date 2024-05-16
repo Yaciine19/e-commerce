@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <form action="login.php" id="form" method="post">
+    <table border="1" width="50%" class="table-login">
+        <tr>
+            <th colspan="2">Login</th>
+        </tr>
+        <tr>
+            <td class="table-td-login" colspan="2" align="center"><img src="./images/user1.png" alt="#" width="200px" height="200px"></td>
+        </tr>
+        <tr>
+            <td class="table-td-login lable-email" >Email :</td>
+            <td class="table-td-login"><input type="email" name="email" id="email"><p id="pemail"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login lable-password">password :</td>
+            <td class="table-td-login"><input type="password" name="password" id="psw"><p id="ppsw"></p></td>
+        </tr>
+        <tr>
+            <td class="table-td-login"><input type="submit" value="Submit" id="submit"></td>
+            <td class="table-td-login"><input type="reset" value="Reset"></td>
+        </tr>
+        <tr>
+            <td class="table-td-login"><h4>Don't have an account?</h4></td>
+            <td class="table-td-login"><a href="sign.html">Sign up</a></td>
+        </tr>
+    </table>
+    </form>
+    <script src="login.js"></script>
+</body>
+</html>
